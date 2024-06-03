@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ejemplo básico</title>
+    <meta charset="UTF-8" />
+  </head>
 
-<head>
-	<title>Ejemplo básico</title>
-	<meta charset="UTF-8" />
-</head>
+  <body>
+    <div class="container">
+      <h1>Tareas por hacer</h1>
+      <div class="agregar">
+        <form>
+        <input type="text" placeholder="Agregar tareas..." />
+        <button class="btn">Agregar</button>
+      </form>
+      </div>
+      <div class="li-conteiner">
+        <ul></ul>
+      </div>
+      <div class="textoTareas">
+        <p class="texto1">Notienes tareas pendientes</p>
+      </div>
+    </div>
 
-<body>
-	<h1>La aplicación esta corriendo!</h1>
-
-	<script src="../src/js/index.js" type="module"></script>
-</body>
-
+    <script src="../src/js/index.js" type="module"></script>
+  </body>
 </html>
