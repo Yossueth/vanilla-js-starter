@@ -1,0 +1,61 @@
+.container {
+  text-align: center;
+  width: 70%;
+  height: 569px;
+  position: absolute;
+  left: 15%;
+  top: 4%;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM3tJH417CITrIz6ZjAp5Kgamai7NwN4Je9Q&s);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: solid 3px rgb(130, 130, 130);
+}
+
+.h1 {
+  color: white;
+}
+body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM3tJH417CITrIz6ZjAp5Kgamai7NwN4Je9Q&s);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.li-container {
+  width: 80%;
+  height: 400px;
+  position: absolute;
+  left: 10%;
+  top: 25%;
+  border: solid 3px rgb(255, 255, 255);
+  color: white;
+  overflow: auto;
+}
+
+.texto {
+  margin-top: 23%;
+  color: white;
+}
+
+#space {
+  border: white 2px solid;
+  border-radius: 4px;
+  width: 96%;
+  height: 40px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+}
+
+
+#check{
+  width: 56%;
+}
+
+#task {
+  color: white;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 7px;
+}
