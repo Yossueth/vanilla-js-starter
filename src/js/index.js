@@ -1,15 +1,41 @@
-let btn = document.querySelector(".btn");
-let input = document.querySelector("input");
-let ul = document.querySelector("ul");
-let textoTareas = document.querySelector(".textoTareas");
+import { tareas, guardarTareas } from "./api.js";
 
-btn.addEventListener("click", (e) => {
+const input = document.querySelector("input");
+const Btn = document.querySelector(".btn");
+const papa = document.querySelector("#papa");
+const texto = document.querySelector(".texto");
+
+guardarTareas();
+
+async function visualizar_datos(){
+  let data = await tareas()
+  console.log(data)
+  return data;
+  
+}
+let datosJSON = visualizar_datos()
+console.log(datosJSON);
+
+Btn.addEventListener("click", (e) => {
   e.preventDefault();
-  let text = input.value;
-  let li = document.querySelector("li");
-  let texto1 = document.querySelector(".texto1");
-  texto1.textContent = text;
 
-  li.appendChild(p);
-  ul.appendChild(li);
+
+  if (input.value !== "") {
+    const space = document.createElement("div");
+    space.id = "space";
+    papa.appendChild(space);
+
+    const check = document.createElement("input");
+    check.id = "check";
+    check.type = "checkbox";
+    space.appendChild(check)
+
+    const task =document.createElement("div")
+    task.id = "task";
+    space.appendChild(task)
+    task.innerHTML = input.value
+
+    input.value = ""
+    texto.style.display = "none";
+  }
 });
