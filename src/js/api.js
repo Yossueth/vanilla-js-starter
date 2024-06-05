@@ -1,29 +1,20 @@
+async function guardarTareas(tarea) {
+  try {
+    const response = await fetch("http://localhost:3000/api/task/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        task: tarea,
+      }),
+    });
 
-let btn = document.querySelector(".btn")
-let input = document.getElementById("inputTask").value;
-
-
-btn.addEventListener("click", function(){
-    guardarTareas();
-})
-
-async function guardarTareas() {
-        try {
-          const response = await fetch("http://localhost:3000/api/task/", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              task: input, 
-            }),
-          });
-      
-          const data = await response.json(); 
-          console.log(data);
-        } catch (error) {
-          console.error("Error", error);
-        }
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Error", error);
+  }
 }
 
 async function tareas() {
@@ -37,4 +28,6 @@ async function tareas() {
   }
 }
 
-export{ tareas, guardarTareas};
+export { tareas, guardarTareas };
+
+tareas();
