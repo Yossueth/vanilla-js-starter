@@ -13,10 +13,11 @@ async function visualizar_datos() {
   // Iterar sobre cada tarea y crear su elemento correspondiente en el DOM
   data.forEach((task) => {
     crearElementoTarea(task);
+    actualizarContador()
   });
 }
 // Función para crear un elemento de tarea en el DOM
-function crearElementoTarea(task) {
+function crearElementoTarea(task) { 
   // Crear un contenedor para la tarea
   const space = document.createElement("div");
   space.className = "space";
@@ -79,13 +80,21 @@ function actualizarContador() {
 // Event listener para agregar una nueva tarea cuando se hace clic en el botón
 Btn.addEventListener("click", (e) => {
   e.preventDefault();
-  if (inputTask.value !== "") {
+  if (inputTask.value.trim() !== "") {
     const newTask = inputTask.value;
     guardarTareas(newTask).then((task) => {
       crearElementoTarea(task);
+      window.location.reload()
     });
     setTimeout(() => {
       inputTask.value = "";
     }, 80);
+  } else {
+    alert('Ingresa un texto')
   }
 });
+
+window.addEventListener('load', function () {
+  actualizarContador()
+  console.log('fafaffafafa');
+})
