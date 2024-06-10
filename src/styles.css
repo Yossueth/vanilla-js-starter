@@ -8,7 +8,7 @@
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM3tJH417CITrIz6ZjAp5Kgamai7NwN4Je9Q&s);
   background-size: cover;
   background-repeat: no-repeat;
-  border: solid 3px rgb(130, 130, 130);
+  border: solid 3px rgb(255, 255, 255);
 }
 
 .h1 {
@@ -18,6 +18,10 @@ body {
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM3tJH417CITrIz6ZjAp5Kgamai7NwN4Je9Q&s);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.btn{
+cursor: pointer;
 }
 
 .li-container {
@@ -36,7 +40,7 @@ body {
   color: white;
 }
 
-#space {
+.space {  
   border: white 2px solid;
   border-radius: 4px;
   width: 96%;
@@ -48,14 +52,35 @@ body {
   grid-template-columns: 5% 90% 5%;
 }
 
-
-#check{
-  width: 56%;
+.check{
+  width: 60%;
+  margin-bottom: 5px;
+}
+ 
+.contador{
+color: white;
+border: white 1.5px solid;
+width: 60px;
+height: 60px;
+display: grid;
+place-items: center;
+border-radius: 50%;
+position: absolute;
+left: 85%;
+top: 6%;
 }
 
-#task {
+.task {
   color: white;
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
   margin-top: 7px;
+}
+
+.basurero{
+margin-top: 6px;
+width: 40%;
+font-size: 18px;
+margin-right: 10;
+cursor: pointer;
 }
