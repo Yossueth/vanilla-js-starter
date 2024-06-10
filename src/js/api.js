@@ -1,3 +1,4 @@
+// esto es el post
 async function guardarTareas(tarea) {
   try {
     const response = await fetch("http://localhost:3000/api/task/", {
@@ -11,11 +12,12 @@ async function guardarTareas(tarea) {
     });
     const data = await response.json();
     console.log(data);
-    return data; // Devolver la tarea creada
+    return data; 
   } catch (error) {
     console.error("Error", error);
   }
 }
+//esto es el get
 async function tareas() {
   try {
     const response = await fetch("http://localhost:3000/api/task/");
@@ -25,6 +27,7 @@ async function tareas() {
     console.error(error);
   }
 }
+//esto es el delete
 async function deleteTask(id) {
   try {
     const response = await fetch(`http://localhost:3000/api/task/${id}`, {
